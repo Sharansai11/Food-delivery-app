@@ -1,0 +1,194 @@
+/* General Styles */
+.cart {
+    margin-top: 100px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items-title {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 2px solid #ddd;
+    font-weight: bold;
+    color: #333;
+}
+
+.cart-items-item {
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1fr 0.5fr;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cart-items-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cross {
+    color: red;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cart-bottom {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cart-total {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-total h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cart-total-details {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color: #555;
+    width: 100%;
+}
+
+.cart-total-details p {
+    margin: 0;
+}
+
+.checkout {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.checkout button {
+    border: none;
+    background-color: tomato;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+    padding: 12px ;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.checkout button:hover {
+    background-color: darkred;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .cart-items-title,
+    .cart-items-item {
+        grid-template-columns: 0.5fr 1.5fr 1fr 1fr 0.5fr;
+    }
+
+    .checkout button {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-items-title,
+    .cart-items-item {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-areas: 
+            "img name price"
+            "quantity total remove";
+    }
+
+    .cart-items-item img {
+        grid-area: img;
+    }
+
+    .cart-items-item p:nth-child(2) {
+        grid-area: name;
+    }
+
+    .cart-items-item p:nth-child(3) {
+        grid-area: price;
+    }
+
+    .cart-items-item p:nth-child(4) {
+        grid-area: quantity;
+    }
+
+    .cart-items-item p:nth-child(5) {
+        grid-area: total;
+    }
+
+    .cart-items-item p:nth-child(6) {
+        grid-area: remove;
+    }
+
+    .cart-items-title {
+        display: none; /* Hide the title on smaller screens */
+    }
+
+    .cart-bottom {
+        align-items: center;
+    }
+
+    .checkout button {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-items-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cart-items-item img {
+        margin-bottom: 10px;
+    }
+
+    .cross {
+        font-size: 24px;
+    }
+
+    .cart-total-details {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cart-total {
+        width: 100%;
+        align-items: center;
+    }
+
+    .checkout button {
+        width: 100%;
+    }
+}

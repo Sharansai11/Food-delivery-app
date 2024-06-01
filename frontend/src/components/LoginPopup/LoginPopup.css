@@ -1,0 +1,132 @@
+/* LoginPopup.css */
+
+.LoginPopup {
+    position: fixed; /* Positions the overlay relative to the viewport */
+    top: 0;         /* Ensures the overlay starts at the top of the viewport */
+    left: 0;        /* Ensures the overlay starts at the left of the viewport */
+    width: 100%;    /* Makes the overlay span the entire width of the viewport */
+    height: 100%;   /* Makes the overlay span the entire height of the viewport */
+    display: flex;  /* Centers the login container */
+    justify-content: center; /* Horizontally centers the login container */
+    align-items: center;     /* Vertically centers the login container */
+    background-color: rgba(0, 0, 0, 0.6); /* Adds a semi-transparent black background */
+    z-index: 1000;  /* Ensures the overlay appears above all other elements */
+  }
+  
+  .login-popup-container {
+    background: #fff; /* White background for the login form */
+    border-radius: 10px; /* Rounded corners */
+
+    padding: 20px 30px; /* Adds padding inside the container */
+    max-width: 400px; /* Sets a max width for the container */
+    width: 100%; /* Makes the container responsive */
+    position: relative; /* Allows for positioning of inner elements */
+  }
+ 
+  
+  .login-popup-title {
+    display: flex; /* Uses flexbox for layout */
+    justify-content: space-between; /* Spreads out title and close icon */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 20px; /* Adds space below the title */
+  }
+.login-popup-condition{
+  
+    display: flex;
+ 
+     gap: 8px;
+     margin-top: 10px;
+  }
+  .login-popup-title h2 {
+    font-size: 24px; /* Sets font size for the title */
+    margin: 0; /* Removes default margin */
+    color: #333; /* Sets text color */
+  }
+  .checkbox {
+    position: relative;
+    top: -10px; /* Adjust this value to move the checkbox higher */
+    left: 0;
+}
+
+  .login-popup-title img {
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    width: 15px; /* Sets icon size */
+    height: 15px; /* Sets icon size */
+  }
+  
+  .login-popup-input {
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks inputs vertically */
+    gap: 15px; /* Adds space between inputs */
+    margin-bottom: 20px; /* Adds space below the input section */
+  }
+  
+  .login-popup-input input {
+    padding: 10px 15px; /* Adds padding inside inputs */
+    font-size: 16px; /* Sets font size */
+    border: 1px solid #ccc; /* Adds a border */
+    border-radius: 5px; /* Rounds input corners */
+    transition: border-color 0.3s; /* Adds transition effect for focus */
+  }
+  
+  .login-popup-input input:focus {
+    border-color: #007BFF; /* Changes border color on focus */
+    outline: none; /* Removes default outline */
+  }
+  
+ .btn {
+    width: 100%; /* Makes button full width */
+    padding: 10px 15px; /* Adds padding inside button */
+    font-size: 16px; /* Sets font size */
+    color: #fff; /* Sets text color */
+    background-color: tomato; /* Sets background color */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds button corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: background-color 0.3s; /* Adds transition effect for hover */
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Changes background color on hover */
+  }
+  
+  .login-popup-terms {
+    display: flex; /* Uses flexbox for layout */
+    align-items: center; /* Centers items vertically */
+    margin-bottom: 20px; /* Adds space below the terms section */
+  }
+  
+  .login-popup-terms input {
+    margin-right: 10px; /* Adds space between checkbox and text */
+  }
+  
+  .login-popup-terms p {
+    font-size: 14px; /* Sets font size */
+    color: #666; /* Sets text color */
+    margin: 0; /* Removes default margin */
+  }
+  
+  .login-popup-terms a {
+    color: #007BFF; /* Sets link color */
+    text-decoration: none; /* Removes underline */
+  }
+  
+  .login-popup-terms a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+  }
+  
+  p {
+    font-size: 14px; /* Sets font size */
+    color: #666; /* Sets text color */
+  }
+  
+  p span {
+    color: #007BFF; /* Sets span color */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: color 0.3s; /* Adds transition effect for hover */
+  }
+  
+  p span:hover {
+    color: #0056b3; /* Changes span color on hover */
+  }
+  

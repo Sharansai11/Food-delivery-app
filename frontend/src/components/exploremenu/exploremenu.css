@@ -1,0 +1,55 @@
+.exploremenu{
+   display: flex;
+   flex-direction: column;
+   
+    gap: 20px;
+
+}
+
+.exploremenu h1{
+    color: #262626;
+   font-weight: 500;
+}
+
+.exp-para{
+    max-width: 60%;
+   font-size:1vw;
+   color:#262626;
+}
+.expmenu-list{
+   display: flex;  
+    justify-content: space-between;
+   align-items: center;
+
+   gap: 3%;
+
+   margin: 20px 0px;
+  text-align: center;
+  overflow-x: scroll;
+}
+.expmenu-list::-webkit-scrollbar{
+    display: none;
+}
+.expmenu-list img{
+    width: 7.5vw;
+    min-width: 80px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.expmenu-list p{
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: max(1.5vw,16px);
+    color: #747474;
+}.expmenu-list hr{
+    margin-top: 10px 0px;
+    background: #e2e2e2;
+    height: 2px;
+  border: none;
+
+}
+.expmenu-list .active{
+    border:4px solid tomato;
+    padding: 2px;
+
+}
